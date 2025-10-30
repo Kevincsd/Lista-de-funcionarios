@@ -27,11 +27,15 @@ while True:
     
     elif funcionamento == 3:
         encontrar= input("Digite o nome do funcionário que deseja encontrar: ")
-        for f in funcionarios:
-            if encontrar == f['nome']:
-                print("Nome: ", f['nome'], "|" "Cargo: ", f['cargo'], "|" "Salário: ", f['salario'], "|" "data_admissao:", f['data_admissao'] )
-            else: "Funcionário não cadastrado ou escrito de maneira errada!"
-    
+        encontrou= False
+        for i in funcionarios:
+            if encontrar == i['nome']:
+                print("Nome: ", i['nome'], "|" "Cargo: ", i['cargo'], "|" "Salário: ", i['salario'], "|" "data_admissao:", i['data_admissao'] )
+                encontrou = True
+                break
+        if encontrou == False:
+             print("Usuário não cadastrado ou escrito de maneira errada!")
+            
     elif funcionamento == 4:
             for i in funcionarios:
                      contador += 1
